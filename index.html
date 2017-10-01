@@ -3,6 +3,7 @@
 <HTML>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Slowcooker recipes</title>
 
@@ -15,7 +16,7 @@
 	}
 
 	body {
-		font-size: 16px;
+		font-size: 18px;
 		font-family: 'Hind', sans-serif;
 		font-weight: 400;
 		color: #333333;
@@ -40,24 +41,12 @@
 		font-size: 1.8em;
 		color: #00386E;
 	}
-		
-	.recipeTitle {
-		font-family: 'Poppins', sans-serif;
-		font-weight: 700;
-		font-size: 2em;
-		background-color: #F25123;
-		padding-top: 0.5em;
-		padding-bottom: 0.5em;
-		padding-left: 0.75em;
-		padding-right: 0.75em;
-		color: white;
-		display: inline-block;
-	}
+
 
 	.recipeDesc {
 		font-family: font-family: 'Hind', sans-serif;
 		font-weight: 400;
-		font-size: 1.5em;
+		font-size: 1.25em;
 		display: inline-block;
 		width: 75%;
 	}
@@ -75,7 +64,7 @@
 	}
 
 	.recipeDeets ul {
-		margin-top: 2em;
+		margin-top: 1.5em;
 		padding: 0;
 	}
 
@@ -99,12 +88,14 @@
 	}
 
 	.btn {
-		padding: 8px;
+		padding: 0.5em;
 		font-size: 1em;
 		font-family: 'Poppins', sans-serif;
 		font-weight: 700;
 		color: white;
 		text-decoration: none;
+		display: inline-block;
+		margin-bottom: 5px;
 	}
 
 	.tealbtn {
@@ -115,13 +106,35 @@
 		background-color: #00386E;
 	}
 
-	#recipeHero {
+	.recipeHero {
 		width: 100%;
 		background: url("img/hero.jpg") no-repeat center center fixed;
 		min-height: 500px;
 		background-size: cover;
 		box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.50);
+	}
 
+	.title {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+		font-size: 2em;
+		background-color: #F25123;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		padding-left: 0.75em;
+		padding-right: 0.75em;
+		color: white;
+		display: inline-block;
+		margin-left: 5%;
+	}
+
+	.overlap {
+		background-color: white;
+		width: 90%;
+		margin-left: 5%;
+		display: inline-block;
+		height: 2em;
+		margin-bottom: 0;
 	}
 
 	#recipeContainer {
@@ -130,13 +143,160 @@
 		margin: auto;
 		padding-left: 10em;
 		padding-right: 10em;
-		padding-top: 4em;
+		padding-top: 2em;
 		padding-bottom: 3em;
+		position: relative;
+		top: -110px;
+	}
+
+	.ingredients {
+		width: 100%;
+		max-height: 450px;
+		columns: 3;
+		padding-bottom: 1.5em;
 	}
 
 	hr {
 	border: 0.5px solid #FBDD00;
+	clear: both;
 	}
+
+	.recipeStep {
+		width: 100%;
+		min-height: 280px;
+		margin-bottom: 1em;
+	}
+
+	.recipeStepImage {
+		width: 35%;
+		min-height: 280px;
+		float: left;
+	}
+
+	#img1 {
+		background: url("img/step1.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	#img2 {
+		background: url("img/step2.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	#img3 {
+		background: url("img/step3.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	#img4 {
+		background: url("img/step4.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+	#img5 {
+		background: url("img/step5.jpg") no-repeat center center;
+		background-size: cover;
+	}
+
+
+	.recipeStepDesc {
+		width: 60%;
+		float: right;
+	}
+
+	#headerContent {
+		position: relative;
+		top: -100px;
+		z-index: 10;
+	}
+
+
+	@media only screen and (max-width: 800px) {
+		  body {
+		    font-size: 16px;
+		    background-color: white;
+		  }
+
+	 	.recipeHero {
+			background: url("img/hero.jpg") no-repeat center center;
+			background-size: 100%;
+			min-height: 260px;
+			}
+
+
+		.title {
+			background-color: white;
+			padding: 0.5em 0 0 0;
+			color: #F25123;
+		}
+
+		#navbar {
+			padding-left: 5%;
+		}
+
+		.recipeDesc {
+			width: 100%;
+		}
+
+		.recipeDeets {
+			width: 100%;
+			columns: 2;
+		}
+
+		#recipeContainer {
+			width: 90%;
+			margin: auto;
+			padding: 0;
+		}
+
+		.actionButtons {
+			display: none;
+		}
+
+		.recipeDeets ul {
+		margin-top: 0;
+		}
+
+		.ingredients {
+		max-height: none;
+		columns: 1;
+		}
+
+		.recipeStepDesc {
+		width: 100%;
+		}
+
+		.recipeStepImage {
+		width: 100%;
+		}
+
+		#headerContent, #recipeContainer {
+		position: static;
+		}
+
+	}
+
+
+	@media only screen and (min-width: 800px) and (max-width: 1300px)  {
+
+		#recipeContainer {
+		padding-left: 4em;
+		padding-right: 4em;
+		padding-top: 2em;
+		padding-bottom: 3em;
+		}
+
+
+		.recipeStepDesc {
+		width: 45%;
+		}
+
+		.recipeStepImage {
+		width: 50%;
+		}
+
+	}
+
 
 	</style>	
 
@@ -148,11 +308,16 @@
 			<div id="wordmark">Slowcooker recipes</div>
 		</div>
 
-		<div id="recipeHero">
+		<div class="recipeHero">
 		</div>
 
-		<div class="recipeTitle"> 
-			Moong daal with coriander
+
+		<div id="headerContent">
+			<div class="title"> 
+				Moong daal with coriander
+			</div>
+			<div class="overlap"> 
+			</div>
 		</div>
 
 		<div id="recipeContainer">
@@ -163,8 +328,10 @@
 			</div>
 
 			<div class="recipeDeets">
-				<a class="btn tealbtn" href="#">Save recipe</a>
-				<a class="btn bluebtn" href="#">Print</a>
+				
+				<div class="actionButtons">
+					<a class="btn tealbtn" href="#">Save recipe</a>
+				</div>
 
 				<ul>
 					<li>
@@ -189,7 +356,87 @@
 				</ul>	
 			</div>
 
+			<div>
+
 			<hr />
+				<h2>Ingredients</h2>
+			</div>
+
+			<div class="ingredients">
+				<b class="recipeLabel">FOR THE DAHL</b>
+				<ul>
+					<li>400g of dry green lentils, 2 cups</li>
+					<li>2 x 400 ml cans of coconut milk</li>
+					<li>3 garlic cloves, chopped</li>
+					<li>2 large tomatoes, chopped</li>
+					<li>1 tsp of ground cumin</li>
+					<li>1 tsp of cinnamon</li>
+					<li>1 tsp of paprika</li>
+					<li>1 tsp of chilli powder</li>
+					<li>1 tsp of curry powder</li>
+					<li>Handful of chilli flakes</li>
+					<li>Salt and pepper to taste</li>
+				</ul>
+
+				<b class="recipeLabel">TO SERVE</b>
+
+				<ul>
+					<li>A serving of rice</li>
+					<li>Sliced avocado</li>
+					<li>Chilli flakes</li>
+					<li>Dollop of coconut yogurt</li>
+				</ul>
+
+			</div>
+
+			<hr />
+
+			<div>
+				<h2>Method</h2>
+			</div>
+
+			<div class="recipeStep">
+				<div class="recipeStepImage" id="img1"></div>
+				<div class="recipeStepDesc">
+					<h3>1. Prepare ingredients</h3>
+					<p>Thinly slice 1 onion. Crush or finely chop the garlic. Peel and finely grate the ginger. Trim and cut the lamb into 1.5 cm chunks.</p>
+				</div>
+			</div>
+
+			<div class="recipeStep">
+				<div class="recipeStepImage" id="img2"></div>
+				<div class="recipeStepDesc">
+					<h3>2. Cook aromatics</h3>
+					<p>Heat 1 tbs oil in a large deep frypan over medium heat. Add the garam masala, onion, garlic, ginger and ¼ tsp salt, and cook, stirring, for 3-5 mins until slightly softened and fragrant.</p>
+				</div>
+			</div>
+
+			<div class="recipeStep">
+				<div class="recipeStepImage" id="img3"></div>
+				<div class="recipeStepDesc">
+					<h3>3. Cook lamb</h3>
+					<p>Increase heat to high, add the lamb and stir for 2 mins or until starting to brown. Add the water (see staples list), cover with a lid and reduce heat to low. Cook for 15 mins or until the lamb is tender.</p>
+				</div>
+			</div>
+
+			<div class="recipeStep">
+				<div class="recipeStepImage" id="img4"></div>
+				<div class="recipeStepDesc">
+					<h3>4. Prepare broccoli 'rice'</h3>
+					<p>Meanwhile, using a food processor, knife or box grater, finely chop or coarsely grate the broccoli until it resembles coarse breadcrumbs. Pick the mint leaves, discarding the stems, and tear any larger leaves, reserving a few leaves to serve.</p>
+				</div>
+			</div>
+
+			<div class="recipeStep">
+				<div class="recipeStepImage" id="img5"></div>
+				<div class="recipeStepDesc">
+					<h3>5. Cook broccoli 'rice'</h3>
+					<p>Heat 2 tsp oil in a large frypan and cook broccoli for 1-2 mins until lightly cooked. Season with salt. Cover and keep warm. Combine half the chopped mint with the yoghurt and season with salt.</p>
+				</div>
+			</div>
+			<br />
+			<hr />
+
 
 		</div>
 
